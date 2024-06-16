@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<audio id="background-music" src="1.mp3" autoplay loop></audio>
+<audio id="background-music" src="1.mp3" loop></audio>
+<div id="overlay" class="overlay">
+    <button id="startButton">开始体验</button>
+</div>
 <div class="container">
     <h1>祝锦鹏中考顺利</h1>
     <p class="blessing">锦鹏，加油！愿你在中考中取得优异的成绩！</p>
     <p class="special-blessing">愿你金榜题名，前程似锦！</p>
     <button id="confettiButton">撒花</button>
-    <button id="musicControlButton">暂停音乐</button>
     <div id="confettiContainer"></div>
 </div>
+<button id="musicControlButton" class="music-control">暂停音乐</button>
 <script src="script.js"></script>
 </body>
 </html>
