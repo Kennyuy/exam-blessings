@@ -5,8 +5,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('jinbang-background.jpg');
+    background-image: url('jinbang-background.jpg'); /* 引用背景图片 */
     background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
 
