@@ -2,6 +2,18 @@ document.getElementById('confettiButton').addEventListener('click', () => {
     showConfetti();
 });
 
+document.getElementById('musicControlButton').addEventListener('click', () => {
+    const music = document.getElementById('background-music');
+    const button = document.getElementById('musicControlButton');
+    if (music.paused) {
+        music.play();
+        button.textContent = '暂停音乐';
+    } else {
+        music.pause();
+        button.textContent = '播放音乐';
+    }
+});
+
 function showConfetti() {
     const confettiContainer = document.getElementById('confettiContainer');
     confettiContainer.innerHTML = '';
