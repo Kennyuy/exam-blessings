@@ -1,17 +1,29 @@
-document.getElementById('confettiButton').addEventListener('click', () => {
-    showConfetti();
-});
-
-document.getElementById('musicControlButton').addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', (event) => {
+    const overlay = document.getElementById('overlay');
+    const startButton = document.getElementById('startButton');
     const music = document.getElementById('background-music');
-    const button = document.getElementById('musicControlButton');
-    if (music.paused) {
-        music.play();
-        button.textContent = '暂停音乐';
-    } else {
-        music.pause();
-        button.textContent = '播放音乐';
-    }
+
+    startButton.addEventListener('click', () => {
+        music.play().catch(error => {
+            console.log('播放音乐时遇到问题:', error);
+        });
+        overlay.style.display = 'none';
+    });
+
+    document.getElementById('confettiButton').addEventListener('click', () => {
+        showConfetti();
+    });
+
+    document.getElementById('musicControlButton').addEventListener('click', () => {
+        const button = document.getElementById('musicControlButton');
+        if (music.paused) {
+            music.play();
+            button.textContent = '暂停音乐';
+        } else {
+            music.pause();
+            button.textContent = '播放音乐';
+        }
+    });
 });
 
 function showConfetti() {
